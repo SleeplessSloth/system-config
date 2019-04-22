@@ -1,6 +1,6 @@
 configuration {
 	combi-modi: "drun,run,ssh";
-	font: "sans 12";
+	font: "sans 9";
 	terminal: "kitty";
 	run-shell-command: "kitty '{cmd}'";
 	matching: "glob";
