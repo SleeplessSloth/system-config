@@ -1,7 +1,7 @@
 [user]
 	name = Sergey Kasmy
 	email = SleeplessSloth79@gmail.com
-	signingkey = 324F28DB1BD0D0EC
+	signingkey = DA1761943D726EDF
 [alias]
 	lg = log --oneline --graph
 	lga = log --oneline --all --graph
