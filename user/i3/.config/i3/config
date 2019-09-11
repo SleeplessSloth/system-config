@@ -142,6 +142,14 @@ bindsym $win+Shift+r restart
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym $win+F7 exec --no-startup-id pactl set-sink-volume 0 -1%
+bindsym $win+F8 exec --no-startup-id pactl set-sink-volume 0 +1%
+
+# Screen brightness controls
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl set +5% 
+bindsym $win+F2 exec brightnessctl set 1-
+bindsym $win+F3 exec brightnessctl set +1 
 
 # Media player controls
 bindsym XF86AudioPlay exec --no-startup-id "playerctl -p cmus,vlc play-pause"
