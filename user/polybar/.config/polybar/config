@@ -13,7 +13,7 @@ alert = #bd2c40
 [bar/main]
 modules-left = i3
 modules-center = media
-modules-right = updates email xkeyboard cpu-temp cpu memory pulseaudio date
+modules-right = updates email xkeyboard cpu memory wifi backlight pulseaudio battery date
 module-margin = 2
 background = ${colors.normal-background}
 foreground = ${colors.normal-font}
@@ -105,6 +105,21 @@ format-prefix = " "
 type = internal/memory
 format-prefix = " "
 
+[module/wifi]
+type = internal/network
+interface = wlp19s0
+interval = 3.0
+
+format-connected-prefix = " "
+label-connected = %essid%
+
+[module/backlight]
+type = internal/backlight
+card = intel_backlight
+format = <label>
+
+format-prefix = " "
+
 [module/pulseaudio]
 type = internal/pulseaudio
 
@@ -115,6 +130,26 @@ ramp-volume-2 = 墳
 ramp-volume-3 = 
 
 format-muted-prefix = " "
+
+[module/battery]
+type = internal/battery
+battery = BAT1
+full-at = 97
+
+format-charging = <ramp-capacity> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+
+format-full-prefix = " "
+ramp-capacity-0 =  
+ramp-capacity-1 =  
+ramp-capacity-2 =  
+ramp-capacity-3 =  
+ramp-capacity-4 =  
+ramp-capacity-5 =  
+ramp-capacity-6 =  
+ramp-capacity-7 =  
+ramp-capacity-8 =  
+ramp-capacity-9 =  
 
 [module/date]
 type = internal/date
